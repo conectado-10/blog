@@ -791,27 +791,6 @@
           "_name": "witsec-modal-window-block",
           "_anchor": "witsec-modal-window-block-9",
           "modalWindow": "<div class=\"modal fade\" id=\"promo-es\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"promo-esLabel\" aria-hidden=\"true\">  <div class=\"modal-dialog  modal-dialog-centered\" style=\"height:auto\" role=\"document\">    <div class=\"modal-content\"><div class=\"modal-header\">  <h5 class=\"no-anim modal-title\" id=\"promo-esLabel\">Novidades</h5>  <a href=\"#\" class=\"no-anim close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a></div><div class=\"modal-body\" id=\"promo-es_body\">Aqui você fica sabendo de: noticias, novidades empresáriais, promoções e eventos </div><div class=\"modal-footer\"><div class=\"mbr-section-btn\"><a href=\"#\" class=\"no-anim btn btn-secondary display-4\" data-dismiss=\"modal\">Tudo bem?</a></div></div>    </div>  </div></div><script>document.addEventListener(\"DOMContentLoaded\", function() {  $(\"#promo-es\").on(\"hidden.bs.modal\", function () {    var html = $( \"#promo-es_body\" ).html();    $( \"#promo-es_body\" ).empty();    $( \"#promo-es_body\" ).append(html);  })});</script>"
-        },
-        {
-          "alias": "deltapi-code-editor",
-          "_isSecondary": true,
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "background-color": "@bgColor",
-            ".mbr-section": {
-              "text-align": "center",
-              "color": "#fff"
-            }
-          },
-          "_name": "custom-html",
-          "_customHTML": "<div class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\" style=\"bottom:0;\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>",
-          "_cid": "s33hvQe0wy",
-          "_anchor": "custom-html-b",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
         }
       ]
     }
