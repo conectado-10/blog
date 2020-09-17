@@ -40,7 +40,7 @@
       }
     ],
     "versionFirst": "4.7.6",
-    "uniqCompNum": 29,
+    "uniqCompNum": 39,
     "versionPublish": "4.12.4",
     "imageResize": true,
     "screenshot": "screenshot.png",
@@ -552,6 +552,147 @@
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".card-box": {
+                "padding": "1rem 2rem 2rem"
+              }
+            },
+            "& when (@bg-type = 'video')": {
+              ".card-box": {
+                "padding": "1rem 2rem 2rem"
+              }
+            },
+            "h4": {
+              "font-weight": "500",
+              "margin-bottom": "0",
+              "text-align": "left",
+              "padding-top": "2rem"
+            },
+            "p": {
+              "margin-bottom": "0",
+              "text-align": "left",
+              "padding-top": "1.5rem",
+              "& when not (@showTitle)": {
+                "padding-top": "2rem"
+              }
+            },
+            ".mbr-section-btn": {
+              "padding-top": "2.5rem",
+              "a": {
+                "margin": "0"
+              }
+            },
+            ".mbr-text": {
+              "color": "#767676"
+            },
+            ".card-wrapper": {
+              "height": "100%",
+              "& when not (@transparentBg)": {
+                "background": "@cardsBg",
+                ".card-box": {
+                  "padding": "0 2rem 2rem"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".card:not(.last-child)": {
+                "padding-bottom": "2rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#232323"
+            }
+          },
+          "_name": "services1",
+          "_customHTML": "<section class=\"services1\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <!---->\n    <mbr-parameters>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <!---->\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <!---->\n        <input type=\"checkbox\" title=\"Show Card Title\" name=\"showCardTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Card Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Card Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Transparent BG\" name=\"transparentBg\" checked>\n        <input type=\"color\" title=\"Cards Bg\" name=\"cardsBg\" value=\"#ffffff\" condition=\"!transparentBg\">\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n        </select>\n        <select title=\"Align Buttons:\" name=\"alignBtn\" condition=\"showButtons\">\n            <option value=\"1\">Left</option>\n            <option value=\"2\" selected>Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <!---->\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <!---->\n    <!--Overlay-->\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <!--Container-->\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <!--Titles-->\n            <div class=\"title pb-5 col-12\">\n                <h2 mbr-if=\"showTitle\" class=\"align-left pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\">Vagas&nbsp;</h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                    Subtitle\n                </h3>\n            </div>\n            <!--Card-1-->\n            <div class=\"card col-12 col-md-6 p-3\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3', 'last-child': cardsAmount == '1'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/11e2d6e8-ab20-4681-b4b4-37eb186785fd-622x1000.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">Inscrição até dia 27/09</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Já fez sua inscrição? São as últimas vagas para cursos gratuitos da modalidade de qualificação a distância. Assim, você se capacita para fazer a diferença na sua vida. <br><br>Acesse o site, escolha o curso do seu interesse e faça logo a inscrição. Saiba mais sobre os pré-requisitos. Não perca tempo, as vagas são limitadas.&nbsp;<br></p>\n                        <!--Btn-->\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-class=\"{'align-left' : alignBtn == 1, 'align-center' : alignBtn == 2, 'align-right' : alignBtn == 3}\"><a href=\"http://www.firjansenai.com.br/vagasgratuitas\" class=\"btn btn-warning-outline\" data-app-placeholder=\"Type Text\">Incrição</a></div>\n                    </div>\n                </div>\n            </div>\n            <!--Card-2-->\n            <div class=\"card col-12 col-md-6 p-3\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3', 'last-child': cardsAmount == '2'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/click-para-baixar-3-696x696.png\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">Vagas Técnico Segurança</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                            Técnico em Segurança do trabalho com registro no MTE em Belo Horizonte MG Minimo de 6 meses Diferencial 1 ano de experiência com carteira de habilitação. Atividades: Promover inspeções nos locais de trabalho das empresas contratante Realizar Medições Ambientais Identificar condições perigosas, tomando todas as providências necessárias para eliminar as situações de riscos Gerar relatórios, cronograma de atividades Treinar e conscientizar os funcionários quanto a atitudes de segurança no trabalho quando solicitado pelo cliente Preparar PPRA - programa de prevenção de riscos ambientais Levantar e estudar estatísticas de acidentes do trabalho, doenças profissionais e do trabalho, analisando suas causas e gravidade, visando a adoção de medidas preventivas quando necessário. Realizar viagens quando pertinente. Tipos de vaga: Tempo Integral, Efetivo/CLT Enviar currículo para:&nbsp;</p>\n                        <!--Btn-->\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-class=\"{'align-left' : alignBtn == 1, 'align-center' : alignBtn == 2, 'align-right' : alignBtn == 3}\"><a href=\"mailto:psicologia@credmhs.com.br\" class=\"btn btn-warning-outline\" data-app-placeholder=\"Type Text\">Enviar o email agora</a></div>\n                    </div>\n                </div>\n            </div>\n            <!--Card-3-->\n            <div class=\"card col-12 col-md-6 p-3\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3', 'last-child': cardsAmount == '3'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/images-225x150.png\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">\n                            Contratação Imediata</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>Telhadista</b><br>Requisitos: Ensino médio completo; curso de acesso por cordas / Alpinismo industrial; experiência com manutenção de telhado.<br>Local: Pindamonhangaba.<br>Horário: Seg à Sex das 07h às 15h20.<br>Salário: Da categoria<br>Benefícios: Refeição no local, VT,CM, CO, Seguro de vida.<br>Interessados e dentro do perfil, enviar cv para:&nbsp;</p>\n                        <!--Btn-->\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-class=\"{'align-left' : alignBtn == 1, 'align-center' : alignBtn == 2, 'align-right' : alignBtn == 3}\"><a href=\"mailto:Jessica.felix@manserv.com.br\" class=\"btn btn-warning-outline\" data-app-placeholder=\"Type Text\">Enviar Curriculo</a></div>\n                    </div>\n                </div>\n            </div>\n            <!--Card-4-->\n            <div class=\"card col-12 col-md-6 p-3\" mbr-if=\"cardsAmount > 3\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3', 'last-child': cardsAmount == '4'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/images-225x150.png\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">\n                            Contratação Imediata     </h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>Auxiliar de Refrigeração</b><br>Requisitos: Ensino médio completo; curso de Refrigeração e elétrica, NR10,NR35, PTA, conhecimento em manutenção corretiva e preventiva de ar condicionado industrial.<br>Local: Pindamonhangaba.<br>Horário: Seg à Sex das 07h às 15h20.<br>Salário: Da categoria<br>Benefícios: Refeição no local, VT,CM, CO, Seguro de vida.</p>\n                        <!--Btn-->\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-class=\"{'align-left' : alignBtn == 1, 'align-center' : alignBtn == 2, 'align-right' : alignBtn == 3}\"><a href=\"mailto:Jessica.felix@manserv.com.br\" class=\"btn btn-warning-outline\" data-app-placeholder=\"Type Text\">Enviar Curriculo</a></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "saS2dLse2v",
+          "_anchor": "services1-x",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".card-box": {
+                "padding": "1rem 2rem 2rem"
+              }
+            },
+            "& when (@bg-type = 'video')": {
+              ".card-box": {
+                "padding": "1rem 2rem 2rem"
+              }
+            },
+            "h4": {
+              "font-weight": "500",
+              "margin-bottom": "0",
+              "text-align": "left",
+              "padding-top": "2rem"
+            },
+            "p": {
+              "margin-bottom": "0",
+              "text-align": "left",
+              "padding-top": "1.5rem",
+              "& when not (@showTitle)": {
+                "padding-top": "2rem"
+              }
+            },
+            ".mbr-section-btn": {
+              "padding-top": "2.5rem",
+              "a": {
+                "margin": "0"
+              }
+            },
+            ".mbr-text": {
+              "color": "#767676"
+            },
+            ".card-wrapper": {
+              "height": "100%",
+              "& when not (@transparentBg)": {
+                "background": "@cardsBg",
+                ".card-box": {
+                  "padding": "0 2rem 2rem"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".card:not(.last-child)": {
+                "padding-bottom": "2rem"
+              }
+            },
+            "H2": {
+              "text-align": "center"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#232323"
+            }
+          },
+          "_name": "services1",
+          "_customHTML": "<section class=\"services1\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <!---->\n    <mbr-parameters>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <!---->\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <!---->\n        <input type=\"checkbox\" title=\"Show Card Title\" name=\"showCardTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Card Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Card Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Transparent BG\" name=\"transparentBg\" checked>\n        <input type=\"color\" title=\"Cards Bg\" name=\"cardsBg\" value=\"#ffffff\" condition=\"!transparentBg\">\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n        </select>\n        <select title=\"Align Buttons:\" name=\"alignBtn\" condition=\"showButtons\">\n            <option value=\"1\" selected>Left</option>\n            <option value=\"2\">Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <!---->\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <!---->\n    <!--Overlay-->\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <!--Container-->\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <!--Titles-->\n            <div class=\"title pb-5 col-12\">\n                <h2 mbr-if=\"showTitle\" class=\"align-left pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                    Colocar no corpo do email a função da vaga.</h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                    Subtitle\n                </h3>\n            </div>\n            <!--Card-1-->\n            <div class=\"card col-12 col-md-6 p-3\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3', 'last-child': cardsAmount == '1'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/images-225x150.png\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">Contratação Imediata</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>Eleteomecânico de Refrigeração</b><br>Requisitos: Ensino médio completo; Técnico em elétrica ou refrigeração, NR10,NR35, PTA, experiência em manutenção corretiva e preventiva em ar condicionado industrial.<br>Local: Pindamonhangaba.<br>Horário: Seg à Sex das 07h às 15h20.<br>Salário: Da categoria<br>Benefícios: Refeição no local, VT,CM, CO, Seguro de vida.</p>\n                        <!--Btn-->\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-class=\"{'align-left' : alignBtn == 1, 'align-center' : alignBtn == 2, 'align-right' : alignBtn == 3}\"><a href=\"mailto:Jessica.felix@manserv.com.br\" class=\"btn btn-warning-outline\" data-app-placeholder=\"Type Text\">Enviar Curriculo</a></div>\n                    </div>\n                </div>\n            </div>\n            <!--Card-2-->\n            <div class=\"card col-12 col-md-6 p-3\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3', 'last-child': cardsAmount == '2'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/76a53a90-0643-4c4b-90d6-777afa1c919a-696x696.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">\n                            Soldador                  </h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Contratação imediata</p>\n                        <!--Btn-->\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-class=\"{'align-left' : alignBtn == 1, 'align-center' : alignBtn == 2, 'align-right' : alignBtn == 3}\"><a href=\"mailto:contato@techoceansolutions.com.br\" class=\"btn btn-warning-outline\" data-app-placeholder=\"Type Text\">Enviar Curriculo</a></div>\n                    </div>\n                </div>\n            </div>\n            <!--Card-3-->\n            <div class=\"card col-12 col-md-6 p-3\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3', 'last-child': cardsAmount == '3'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/60c2684b-6a4c-479e-af3b-7a43b5236625-492x492.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">\n                            Caldeireiro</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                            Contratação imediata</p>\n                        <!--Btn-->\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-class=\"{'align-left' : alignBtn == 1, 'align-center' : alignBtn == 2, 'align-right' : alignBtn == 3}\"><a href=\"mailto:contato@techoceansolutions.com.br\" class=\"btn btn-warning-outline\" data-app-placeholder=\"Type Text\">Enviar Curriculo</a></div>\n                    </div>\n                </div>\n            </div>\n            <!--Card-4-->\n            <div class=\"card col-12 col-md-6 p-3\" mbr-if=\"cardsAmount > 3\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3', 'last-child': cardsAmount == '4'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/product1.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">\n                            Watch Strict\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium dolores doloribus\n                            eligendi eum illo placeat quis repellendus sequi tempore!\n                        </p>\n                        <!--Btn-->\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-class=\"{'align-left' : alignBtn == 1, 'align-center' : alignBtn == 2, 'align-right' : alignBtn == 3}\">\n                            <a href=\"https://mobirise.co\" class=\"btn btn-warning-outline\">\n                                $ 790\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "saS8DLkvM2",
+          "_anchor": "services1-y",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
             "background-color": "@bgColor",
             "overflow": "hidden",
             ".mbr-slider .carousel-control": {
@@ -619,9 +760,9 @@
             }
           },
           "_name": "gallery3",
-          "_customHTML": "<section class=\"mbr-gallery mbr-slider-carousel\" group=\"Sliders & Gallery\" plugins=\"Masonry,BootstrapCarouselSwipe,Gallery,VimeoPlayer,SliderVideo\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" inline>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#554346\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradOverlay\" checked>\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#45505b\" condition=\"gradOverlay\">\n        <input type=\"range\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" inline>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\n        <input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div mbr-gallery=\"gallery\" mbr-gallery-spacing=\"2\"></div>\n    </div>\n\n</section>",
-          "_cid": "saQZ7MdZ7c",
-          "_anchor": "gallery3-r",
+          "_customHTML": "<section class=\"mbr-gallery mbr-slider-carousel\" group=\"Sliders & Gallery\" plugins=\"Masonry,BootstrapCarouselSwipe,Gallery,VimeoPlayer,SliderVideo\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" inline>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#554346\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradOverlay\" checked>\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#45505b\" condition=\"gradOverlay\">\n        <input type=\"range\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" inline>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\n        <input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div mbr-gallery=\"gallery\" mbr-gallery-show-text></div>\n    </div>\n\n</section>",
+          "_cid": "saSeplhUG5",
+          "_anchor": "gallery3-12",
           "_protectedParams": [
             "text_all",
             "gallery__filtersTextStyle",
@@ -636,7 +777,7 @@
             "gallery__filtersBtnStyle": "btn-primary-outline",
             "gallery": [
               {
-                "tags": "Fantástica",
+                "tags": "Animado",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
@@ -645,46 +786,7 @@
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
-                "caption": "Digite aqui a legenda",
-                "active": false
-              },
-              {
-                "tags": "Responsivo",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/4db0877f-ab97-4b3c-bd8d-27b93599d104-720x720.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/4db0877f-ab97-4b3c-bd8d-27b93599d104-720x720-720x720.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Digite aqui a legenda",
-                "active": false
-              },
-              {
-                "tags": "Criativo",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/capturar-510x383.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/capturar-510x383-510x383.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Digite aqui a legenda",
-                "active": false
-              },
-              {
-                "tags": "Animado",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/capturar-510x480.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/capturar-510x480-510x480.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Digite aqui a legenda",
+                "caption": "<a href=\"mailto:Vagas@traumesolutions.com.br\">Enviar Agora: Vagas@traumesolutions.com.br</a>",
                 "active": false
               },
               {
@@ -692,12 +794,25 @@
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/capturar-510x549.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/capturar-510x549-510x549.jpg",
+                "image": "@PROJECT_PATH@/assets/images/capturar-510x549-510x549.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/capturar-510x549-510x549-510x549.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
-                "caption": "Digite aqui a legenda",
+                "caption": "<a href=\"mailto:atendimento.duaspontes@consorciobarragens.com.br\">Enviar Agora: atendimento.duaspontes@consorciobarragens.com.br</a>",
+                "active": false
+              },
+              {
+                "tags": "Fantástica",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/4db0877f-ab97-4b3c-bd8d-27b93599d104-720x720-720x720-720x720.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/4db0877f-ab97-4b3c-bd8d-27b93599d104-720x720-720x720-720x720-720x720.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "<a href=\"mailto:recrutamento@techinsp-og.vom\">Envie Agora: recrutamento@techinsp-og.vom</a>",
                 "active": true
               },
               {
@@ -705,16 +820,61 @@
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/c5043905-464c-443b-bea5-c759076c83ca-707x530.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/c5043905-464c-443b-bea5-c759076c83ca-707x530-707x530.jpg",
+                "image": "@PROJECT_PATH@/assets/images/capturar-510x383-510x383.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/capturar-510x383-510x383-510x383.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "<a href=\"mailto:recrutamento.jaragua@jaraguaequipamentos.com\">Envie Agora: recrutamento.jaragua@jaraguaequipamentos.com</a>",
+                "active": true
+              },
+              {
+                "tags": "Animado",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@THEME_PATH@/components/_images/background8.jpg",
+                "thumb": "@THEME_PATH@/components/_images/background8.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
                 "caption": "Digite aqui a legenda",
-                "active": false
+                "active": true
               }
             ]
           }
+        },
+        {
+          "_params": {
+            "modalName": "Aten-o-",
+            "modalSize": "medium",
+            "modalHeader": false,
+            "modalTitle": "Novidades",
+            "modalBody": "pode clicar que vai direto para o corpo do email sugerido. Sempre quando enviar coloque a função no corpo do email.",
+            "modalBodyHTML": false,
+            "modalFooter": true,
+            "modalCloseBtn": true,
+            "modalCloseText": "Vamos lá?",
+            "modalLink": false,
+            "modalLinkUrl": "",
+            "modalLinkText": "Visit Mobirise",
+            "modalLinkNewWindow": true,
+            "modalVerticalCenter": true,
+            "modalFade": true,
+            "modalAutoOpen": true,
+            "modalAutoOpenOnce": true,
+            "modalAutoOpenGDPR": true,
+            "modalAutoOpenDelay": 0
+          },
+          "modalTest": "<div class=\"mbr-section-btn\">\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#Aten-o-\">Preview Aten-o-</a>\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#Aten-o--howtouse\">How to use Aten-o-</a>\n</div>\n<div class=\"modal fade\" id=\"Aten-o--howtouse\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"Aten-o--howtouseLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\" style=\"height:auto\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\" id=\"Aten-o--howtouseLabel\">How to use?</h5>\n        <a href=\"\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a>\n      </div>\n      <div class=\"modal-body\">\n        Using your new modal is very easy. Simply create a new link, then click the \"...\" tab and enter the following as custom URL:<br /><br />\n        <code>javascript:OpenModal('Aten-o-')</code>\n      </div>\n      <div class=\"modal-footer\">\n        <div class=\"mbr-section-btn\"><a href=\"#\" class=\"btn btn-secondary display-4\" data-dismiss=\"modal\">Close</a></div>\n      </div>\n    </div>\n  </div>\n</div>",
+          "modalBody": "pode clicar que vai direto para o corpo do email sugerido. Sempre quando enviar coloque a função no corpo do email.",
+          "alias": "witsec-modal-window",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "witsec-modal-window-block",
+          "modalWindow": "<div class=\"modal fade\" id=\"Aten-o-\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"Aten-o-Label\" aria-hidden=\"true\">  <div class=\"modal-dialog  modal-dialog-centered\" style=\"height:auto\" role=\"document\">    <div class=\"modal-content\"><div class=\"modal-body\" id=\"Aten-o-_body\">pode clicar que vai direto para o corpo do email sugerido. Sempre quando enviar coloque a função no corpo do email.</div><div class=\"modal-footer\"><div class=\"mbr-section-btn\"><a href=\"#\" class=\"no-anim btn btn-secondary display-4\" data-dismiss=\"modal\">Vamos lá?</a></div></div>    </div>  </div></div><script>document.addEventListener(\"DOMContentLoaded\", function() {  $(\"#Aten-o-\").on(\"hidden.bs.modal\", function () {    var html = $( \"#Aten-o-_body\" ).html();    $( \"#Aten-o-_body\" ).empty();    $( \"#Aten-o-_body\" ).append(html);  })});</script>",
+          "_anchor": "witsec-modal-window-block-l"
         },
         {
           "alias": false,
@@ -799,38 +959,6 @@
           "_global": false,
           "_once": false,
           "_params": {}
-        },
-        {
-          "_params": {
-            "modalName": "Empregos",
-            "modalSize": "medium",
-            "modalHeader": false,
-            "modalTitle": "Novidades",
-            "modalBody": "Aqui Você encontra vagas de empregos, ",
-            "modalBodyHTML": false,
-            "modalFooter": true,
-            "modalCloseBtn": true,
-            "modalCloseText": "Vamos lá?",
-            "modalLink": false,
-            "modalLinkUrl": "",
-            "modalLinkText": "Visit Mobirise",
-            "modalLinkNewWindow": true,
-            "modalVerticalCenter": true,
-            "modalFade": true,
-            "modalAutoOpen": true,
-            "modalAutoOpenOnce": true,
-            "modalAutoOpenGDPR": true,
-            "modalAutoOpenDelay": 0
-          },
-          "modalTest": "<div class=\"mbr-section-btn\">\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#Empregos\">Preview Empregos</a>\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#Empregos-howtouse\">How to use Empregos</a>\n</div>\n<div class=\"modal fade\" id=\"Empregos-howtouse\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"Empregos-howtouseLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\" style=\"height:auto\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\" id=\"Empregos-howtouseLabel\">How to use?</h5>\n        <a href=\"\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a>\n      </div>\n      <div class=\"modal-body\">\n        Using your new modal is very easy. Simply create a new link, then click the \"...\" tab and enter the following as custom URL:<br /><br />\n        <code>javascript:OpenModal('Empregos')</code>\n      </div>\n      <div class=\"modal-footer\">\n        <div class=\"mbr-section-btn\"><a href=\"#\" class=\"btn btn-secondary display-4\" data-dismiss=\"modal\">Close</a></div>\n      </div>\n    </div>\n  </div>\n</div>",
-          "modalBody": "Aqui Você encontra vagas de empregos, ",
-          "alias": "witsec-modal-window",
-          "_tags": [
-            "Extension"
-          ],
-          "_name": "witsec-modal-window-block",
-          "modalWindow": "<div class=\"modal fade\" id=\"Empregos\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"EmpregosLabel\" aria-hidden=\"true\">  <div class=\"modal-dialog  modal-dialog-centered\" style=\"height:auto\" role=\"document\">    <div class=\"modal-content\"><div class=\"modal-body\" id=\"Empregos_body\">Aqui Você encontra vagas de empregos, </div><div class=\"modal-footer\"><div class=\"mbr-section-btn\"><a href=\"#\" class=\"no-anim btn btn-secondary display-4\" data-dismiss=\"modal\">Vamos lá?</a></div></div>    </div>  </div></div><script>document.addEventListener(\"DOMContentLoaded\", function() {  $(\"#Empregos\").on(\"hidden.bs.modal\", function () {    var html = $( \"#Empregos_body\" ).html();    $( \"#Empregos_body\" ).empty();    $( \"#Empregos_body\" ).append(html);  })});</script>",
-          "_anchor": "witsec-modal-window-block-l"
         },
         {
           "_params": {
