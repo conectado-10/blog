@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "My Site",
-    "currentPage": "page1.html",
+    "currentPage": "page2.html",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -40,7 +40,7 @@
       }
     ],
     "versionFirst": "4.7.6",
-    "uniqCompNum": 45,
+    "uniqCompNum": 46,
     "versionPublish": "4.12.4",
     "imageResize": true,
     "screenshot": "screenshot.png",
@@ -1096,13 +1096,77 @@
             }
           },
           "_name": "testimonials5",
-          "_customHTML": "<section class=\"testimonials5\" group=\"Testimonials\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n     <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Name\" name=\"showName\" checked>\n        <input type=\"checkbox\" title=\"Show Biography\" name=\"showBio\" checked>\n        <input type=\"checkbox\" title=\"Show Images\" name=\"showImages\" checked>\n        <input type=\"checkbox\" title=\"Square Image\" name=\"squareImg\" condition=\"showImages\">\n        <input type=\"checkbox\" title=\"Translucency\" name=\"translucency\" checked>\n\n        <input type=\"color\" title=\"Cards Color\" name=\"cardsColor\" value=\"#073b4c\">\n        <select title=\"Cards Count\" name=\"TestimonialsCount\">\n         <option value=\"1\">1</option>\n         <option value=\"2\" selected>2</option>\n         <option value=\"3\">3</option>\n         <option value=\"4\">4</option>\n         <option value=\"5\">5</option>\n         <option value=\"6\">6</option>\n         <option value=\"7\">7</option>\n         <option value=\"8\">8</option>\n         <option value=\"9\">9</option>\n         <option value=\"10\">10</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#0f7699\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\"> \n    <!-- End block parameters --> \n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 align-center\">\n                <h2 class=\"pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n                    CURRICULOS CADASTRADOS</h2>\n                <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                    Mobirise is one of the easiest website development tools available today.\n                </h3>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-column\" mbr-list mbr-list-grow=\"TestimonialsCount\">\n            <div class=\"mbr-testimonial align-center col-12 col-md-10\">\n                <div class=\"panel-item\">\n                    <div class=\"card-block\">\n                        <div class=\"testimonial-photo\" mbr-if=\"showImages\">\n                            <img src=\"@PROJECT_PATH@/assets/images/pp-1-240x240.jpg\" alt title>\n                        </div>\n                        <p class=\"mbr-text mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\">SUPERVISOR DE CALDEIREIRO</p>\n                    </div>\n                    <div class=\"card-footer\" mbr-if=\"showName||showBio\">\n                        <div class=\"mbr-author-name mbr-bold mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showName\" data-app-selector=\".mbr-author-name\" mbr-text>\n                             WASHINGTON HERVAL&nbsp;</div>\n                        <small class=\"mbr-author-desc mbr-italic mbr-light mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showBio\" data-app-selector=\".mbr-author-desc\" mbr-text><b><i>&gt; VER CURRICULO</i></b><br><b><i><a href=\"https://wa.me/5522997441536\" class=\"text-white\">&gt;ZAP: (22)997441536</a></i></b></small>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"mbr-testimonial align-center col-12 col-md-10\">\n                <div class=\"panel-item\">\n                    <div class=\"card-block\">\n                        <div class=\"testimonial-photo\" mbr-if=\"showImages\">\n                            <img src=\"../_images/face3.jpg\">\n                        </div>\n                        <p class=\"mbr-text mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, aspernatur, voluptatibus, atque, tempore molestiae.\n                        </p>\n                    </div>\n                    <div class=\"card-footer\" mbr-if=\"showName||showBio\">\n                        <div class=\"mbr-author-name mbr-bold mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showName\" data-app-selector=\".mbr-author-name\" mbr-text>\n                             John Smith\n                        </div>\n                        <small class=\"mbr-author-desc mbr-italic mbr-light mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showBio\" data-app-selector=\".mbr-author-desc\" mbr-text>\n                               Developer\n                        </small>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>   \n</section>",
+          "_customHTML": "<section class=\"testimonials5\" group=\"Testimonials\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n     <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Name\" name=\"showName\" checked>\n        <input type=\"checkbox\" title=\"Show Biography\" name=\"showBio\" checked>\n        <input type=\"checkbox\" title=\"Show Images\" name=\"showImages\" checked>\n        <input type=\"checkbox\" title=\"Square Image\" name=\"squareImg\" condition=\"showImages\">\n        <input type=\"checkbox\" title=\"Translucency\" name=\"translucency\" checked>\n\n        <input type=\"color\" title=\"Cards Color\" name=\"cardsColor\" value=\"#073b4c\">\n        <select title=\"Cards Count\" name=\"TestimonialsCount\">\n         <option value=\"1\" selected>1</option>\n         <option value=\"2\">2</option>\n         <option value=\"3\">3</option>\n         <option value=\"4\">4</option>\n         <option value=\"5\">5</option>\n         <option value=\"6\">6</option>\n         <option value=\"7\">7</option>\n         <option value=\"8\">8</option>\n         <option value=\"9\">9</option>\n         <option value=\"10\">10</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#0f7699\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\"> \n    <!-- End block parameters --> \n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 align-center\">\n                <h2 class=\"pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\"><b>\n                    CONTRATE ALGUEM</b><br><b>CURRICULOS<br></b><br><br></h2>\n                <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                    Mobirise is one of the easiest website development tools available today.\n                </h3>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-column\" mbr-list mbr-list-grow=\"TestimonialsCount\">\n            <div class=\"mbr-testimonial align-center col-12 col-md-10\">\n                <div class=\"panel-item\">\n                    <div class=\"card-block\">\n                        <div class=\"testimonial-photo\" mbr-if=\"showImages\">\n                            <img src=\"@PROJECT_PATH@/assets/images/pp-1-240x240.jpg\" alt title>\n                        </div>\n                        <p class=\"mbr-text mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\">SUPERVISOR DE CALDEIREIRO<br><br></p>\n                    </div>\n                    <div class=\"card-footer\" mbr-if=\"showName||showBio\">\n                        <div class=\"mbr-author-name mbr-bold mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showName\" data-app-selector=\".mbr-author-name\" mbr-text>\n                             WASHINGTON HERVAL&nbsp;</div>\n                        <small class=\"mbr-author-desc mbr-italic mbr-light mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showBio\" data-app-selector=\".mbr-author-desc\" mbr-text><b><i><a href=\"assets/files/CURRICULO-WASHIGTON.pdf\">&gt; VER CURRICULO</a></i></b><br><b><i><a href=\"https://wa.me/5522997441536\" class=\"text-white\">&gt;ZAP: (22)997441536</a></i></b><br><b><i>RIO DAS OSTRAS</i></b></small>\n                    </div>\n                </div>\n            </div>\n\n            \n        </div>\n    </div>   \n</section>",
           "_cid": "sb2e5gh8ay",
           "_anchor": "testimonials5-13",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            },
+            "blockquote": {
+              "background-color": "@quoteBgColor",
+              "border-color": "@quoteLineColor",
+              "border-width": "(@quoteLineWidth * 1px)",
+              "margin-bottom": "0px",
+              "border-radius": "0px (@quoteBorderRadius * 1px) (@quoteBorderRadius * 1px) 0px"
+            },
+            "P": {
+              "text-align": "left"
+            },
+            "DIV": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "design-block",
+          "_customHTML": "<section class=\"mbr-section article\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#232323\">\n      \t<input type=\"color\" title=\"Quote Background Color\" name=\"quoteBgColor\" value=\"#232323\">\n      \t<input type=\"color\" title=\"Quote Line Color\" name=\"quoteLineColor\" value=\"#f7ed4a\">\n      \t<input type=\"range\" inline title=\"Quote Line Width\" name=\"quoteLineWidth\" min=\"0\" max=\"20\" step=\"1\" value=\"10\">\n      \t<input type=\"range\" inline title=\"Quote Border Radius\" name=\"quoteBorderRadius\" min=\"0\" max=\"50\" step=\"5\" value=\"25\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-1\" data-multiline mbr-article>\n                <blockquote><p><span style=\"font-style: normal;\"><b>Currículos cadastrados.</b></span></p><p><span style=\"font-style: normal;\"><b>Visualição Pessoas.</b></span></p><p><span style=\"font-style: normal;\"><b>Rapido e Pratico.</b></span></p></blockquote>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "JOI2ragJHq",
+          "_anchor": "design-block-JOI2ragJHq",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_params": {
+            "modalName": "CURRICULOS-CADASTRADOS",
+            "modalSize": "medium",
+            "modalHeader": true,
+            "modalTitle": "BANCO DE CURRICULOS",
+            "modalBody": "Aqui você consegue visualizar todos os curriculos cadastrados. Aqui você consegue visualizar o curriculo atraves de um click.",
+            "modalBodyHTML": false,
+            "modalFooter": true,
+            "modalCloseBtn": true,
+            "modalCloseText": "Obrigado!",
+            "modalLink": false,
+            "modalLinkUrl": "https://mobirise.com/",
+            "modalLinkText": "Visit Mobirise",
+            "modalLinkNewWindow": true,
+            "modalVerticalCenter": false,
+            "modalFade": true,
+            "modalAutoOpen": false,
+            "modalAutoOpenOnce": true,
+            "modalAutoOpenGDPR": true,
+            "modalAutoOpenDelay": 0
+          },
+          "modalTest": "<div class=\"mbr-section-btn\">\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#CURRICULOS-CADASTRADOS\">Preview CURRICULOS-CADASTRADOS</a>\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#CURRICULOS-CADASTRADOS-howtouse\">How to use CURRICULOS-CADASTRADOS</a>\n</div>\n<div class=\"modal fade\" id=\"CURRICULOS-CADASTRADOS-howtouse\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"CURRICULOS-CADASTRADOS-howtouseLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\" style=\"height:auto\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\" id=\"CURRICULOS-CADASTRADOS-howtouseLabel\">How to use?</h5>\n        <a href=\"\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a>\n      </div>\n      <div class=\"modal-body\">\n        Using your new modal is very easy. Simply create a new link, then click the \"...\" tab and enter the following as custom URL:<br /><br />\n        <code>javascript:OpenModal('CURRICULOS-CADASTRADOS')</code>\n      </div>\n      <div class=\"modal-footer\">\n        <div class=\"mbr-section-btn\"><a href=\"#\" class=\"btn btn-secondary display-4\" data-dismiss=\"modal\">Close</a></div>\n      </div>\n    </div>\n  </div>\n</div>",
+          "modalBody": "Aqui você consegue visualizar todos os curriculos cadastrados. Aqui você consegue visualizar o curriculo atraves de um click.",
+          "alias": "witsec-modal-window",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "witsec-modal-window-block",
+          "_anchor": "witsec-modal-window-block-19",
+          "modalWindow": "<div class=\"modal fade\" id=\"CURRICULOS-CADASTRADOS\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"CURRICULOS-CADASTRADOSLabel\" aria-hidden=\"true\">  <div class=\"modal-dialog  \" style=\"height:auto\" role=\"document\">    <div class=\"modal-content\"><div class=\"modal-header\">  <h5 class=\"no-anim modal-title\" id=\"CURRICULOS-CADASTRADOSLabel\">BANCO DE CURRICULOS</h5>  <a href=\"#\" class=\"no-anim close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a></div><div class=\"modal-body\" id=\"CURRICULOS-CADASTRADOS_body\">Aqui você consegue visualizar todos os curriculos cadastrados. Aqui você consegue visualizar o curriculo atraves de um click.</div><div class=\"modal-footer\"><div class=\"mbr-section-btn\"><a href=\"#\" class=\"no-anim btn btn-secondary display-4\" data-dismiss=\"modal\">Obrigado!</a></div></div>    </div>  </div></div><script>document.addEventListener(\"DOMContentLoaded\", function() {  $(\"#CURRICULOS-CADASTRADOS\").on(\"hidden.bs.modal\", function () {    var html = $( \"#CURRICULOS-CADASTRADOS_body\" ).html();    $( \"#CURRICULOS-CADASTRADOS_body\" ).empty();    $( \"#CURRICULOS-CADASTRADOS_body\" ).append(html);  })});</script>"
         }
       ]
     }
