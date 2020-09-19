@@ -1114,8 +1114,8 @@
             "modalBodyHTML": false,
             "modalFooter": true,
             "modalCloseBtn": true,
-            "modalCloseText": "ok!",
-            "modalLink": true,
+            "modalCloseText": "Vamos lá?",
+            "modalLink": false,
             "modalLinkUrl": "https://www.123formbuilder.com/form-5646008/",
             "modalLinkText": "Cadastre seu Curriculo",
             "modalLinkNewWindow": true,
@@ -1134,7 +1134,7 @@
           ],
           "_name": "witsec-modal-window-block",
           "_anchor": "witsec-modal-window-block-19",
-          "modalWindow": "<div class=\"modal fade\" id=\"CURRICULOS-CADASTRADOS\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"CURRICULOS-CADASTRADOSLabel\" aria-hidden=\"true\">  <div class=\"modal-dialog  \" style=\"height:auto\" role=\"document\">    <div class=\"modal-content\"><div class=\"modal-header\">  <h5 class=\"no-anim modal-title\" id=\"CURRICULOS-CADASTRADOSLabel\">BANCO DE CURRICULOS</h5>  <a href=\"#\" class=\"no-anim close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a></div><div class=\"modal-body\" id=\"CURRICULOS-CADASTRADOS_body\">Aqui você consegue visualizar todos os curriculos cadastrados. Aqui você consegue visualizar o curriculo atraves de um click.</div><div class=\"modal-footer\"><div class=\"mbr-section-btn\"><a href=\"#\" class=\"no-anim btn btn-secondary display-4\" data-dismiss=\"modal\">ok!</a></div><div class=\"mbr-section-btn\"><a href=\"https://www.123formbuilder.com/form-5646008/\" class=\"no-anim btn btn-primary display-4\" target=_new>Cadastre seu Curriculo</a></div></div>    </div>  </div></div><script>document.addEventListener(\"DOMContentLoaded\", function() {  $(\"#CURRICULOS-CADASTRADOS\").on(\"hidden.bs.modal\", function () {    var html = $( \"#CURRICULOS-CADASTRADOS_body\" ).html();    $( \"#CURRICULOS-CADASTRADOS_body\" ).empty();    $( \"#CURRICULOS-CADASTRADOS_body\" ).append(html);  })});</script>"
+          "modalWindow": "<div class=\"modal fade\" id=\"CURRICULOS-CADASTRADOS\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"CURRICULOS-CADASTRADOSLabel\" aria-hidden=\"true\">  <div class=\"modal-dialog  \" style=\"height:auto\" role=\"document\">    <div class=\"modal-content\"><div class=\"modal-header\">  <h5 class=\"no-anim modal-title\" id=\"CURRICULOS-CADASTRADOSLabel\">BANCO DE CURRICULOS</h5>  <a href=\"#\" class=\"no-anim close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a></div><div class=\"modal-body\" id=\"CURRICULOS-CADASTRADOS_body\">Aqui você consegue visualizar todos os curriculos cadastrados. Aqui você consegue visualizar o curriculo atraves de um click.</div><div class=\"modal-footer\"><div class=\"mbr-section-btn\"><a href=\"#\" class=\"no-anim btn btn-secondary display-4\" data-dismiss=\"modal\">Vamos lá?</a></div></div>    </div>  </div></div><script>document.addEventListener(\"DOMContentLoaded\", function() {  $(\"#CURRICULOS-CADASTRADOS\").on(\"hidden.bs.modal\", function () {    var html = $( \"#CURRICULOS-CADASTRADOS_body\" ).html();    $( \"#CURRICULOS-CADASTRADOS_body\" ).empty();    $( \"#CURRICULOS-CADASTRADOS_body\" ).append(html);  })});</script>"
         },
         {
           "_params": {
