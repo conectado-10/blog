@@ -102,7 +102,7 @@
 
 </section>
 
-<section class="engine"><a href="https://mobirise.info/g">build your own site</a></section><section class="team1 cid-sb8jWNw38S" id="team1-1e">
+<section class="engine"><a href="https://mobirise.info/a">online website builder</a></section><section class="team1 cid-sb8jWNw38S" id="team1-1e">
     
     
     
@@ -181,6 +181,69 @@
     </div>
 </section>
 
+<section class="mbr-section" id="witsec-modal-window-block-1g" data-rv-view="63">
+
+	<style>
+	/* Let's not animate the contents of modal windows */
+	.no-anim {
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+	</style>
+
+	
+	
+	<div><div class="modal fade" id="seja-bem-vindo" tabindex="-1" role="dialog" aria-labelledby="seja-bem-vindoLabel" aria-hidden="true">  <div class="modal-dialog  " style="height:auto" role="document">    <div class="modal-content"><div class="modal-header">  <h5 class="no-anim modal-title" id="seja-bem-vindoLabel">Concurso Publico 21/09/2020</h5>  <a href="#" class="no-anim close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a></div><div class="modal-body" id="seja-bem-vindo_body">Marinha abre concurso público para o Corpo Auxiliar de Praças-2020, veja mais de vagas diferente</div><div class="modal-footer"><div class="mbr-section-btn"><a href="#" class="no-anim btn btn-secondary display-4" data-dismiss="modal">ok?</a></div><div class="mbr-section-btn"><a href="https://www.inscricao.marinha.mil.br/marinha/index_concursos.jsp?id_concurso=395" class="no-anim btn btn-primary display-4" target="_new">Inscrição</a></div></div>    </div>  </div></div><script>document.addEventListener("DOMContentLoaded", function() {  $("#seja-bem-vindo").on("hidden.bs.modal", function () {    var html = $( "#seja-bem-vindo_body" ).html();    $( "#seja-bem-vindo_body" ).empty();    $( "#seja-bem-vindo_body" ).append(html);  })});</script></div>
+
+	<script>
+	if (typeof OpenModal === 'undefined') {
+		OpenModal = function(modalName) {
+			if ($('#' + modalName).length)
+				$('#' + modalName).modal('show');
+			else
+				alert("Sorry, but there is no modal for " + modalName);
+		}
+	}
+
+	function modalSetCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	function modalGetCookie(cname) {
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+	</script>
+
+</section><script>
+document.addEventListener("DOMContentLoaded", function() {
+  if (modalGetCookie("seja-bem-vindo_viewed") == "") {
+    setTimeout( function() {
+      if (document.cookie)
+        modalSetCookie("seja-bem-vindo_viewed", true, 3600);
+      OpenModal("seja-bem-vindo");
+    } , 0);
+  }
+});
+</script>
+
 <section once="footers" class="cid-sb8kFH9yrC" id="footer6-1f">
 
     
@@ -204,14 +267,14 @@
   <script src="assets/smoothscroll/smooth-scroll.js"></script>
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>
-  <script src="assets/singa4real/plugin-backend.js"></script>
   <script src="assets/singa4real/shopcart.js"></script>
-  <script src="assets/witsec-mailform/witsec-mailform.js"></script>
-  <script src="assets/theme/js/script.js"></script>
+  <script src="assets/singa4real/plugin-backend.js"></script>
   <script src="assets/singa4real/singa4real-form.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="assets/witsec-mailform/witsec-mailform.js"></script>
   
   
- <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
-    <input name="animation" type="hidden">
+  <input name="animation" type="hidden">
+   <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
   </body>
 </html>
