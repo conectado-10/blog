@@ -1382,8 +1382,8 @@
             "modalSize": "medium",
             "modalHeader": true,
             "modalTitle": "Contratação Imediata",
-            "modalBody": "<iframe src=\"https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2FOportunidadesRioDasOstrasMacae%2Fposts%2F3474946822626242&show_text=false&width=552&height=421&appId\" width=\"552\" height=\"421\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowTransparency=\"true\" allow=\"encrypted-media\"></iframe>     ",
-            "modalBodyHTML": true,
+            "modalBody": "Veja as vagas diponiveis",
+            "modalBodyHTML": false,
             "modalFooter": true,
             "modalCloseBtn": true,
             "modalCloseText": "ok?",
@@ -1399,14 +1399,14 @@
             "modalAutoOpenDelay": 0
           },
           "modalTest": "<div class=\"mbr-section-btn\">\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#seja-bem-vindo\">Preview seja-bem-vindo</a>\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#seja-bem-vindo-howtouse\">How to use seja-bem-vindo</a>\n</div>\n<div class=\"modal fade\" id=\"seja-bem-vindo-howtouse\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"seja-bem-vindo-howtouseLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\" style=\"height:auto\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\" id=\"seja-bem-vindo-howtouseLabel\">How to use?</h5>\n        <a href=\"\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a>\n      </div>\n      <div class=\"modal-body\">\n        Using your new modal is very easy. Simply create a new link, then click the \"...\" tab and enter the following as custom URL:<br /><br />\n        <code>javascript:OpenModal('seja-bem-vindo')</code>\n      </div>\n      <div class=\"modal-footer\">\n        <div class=\"mbr-section-btn\"><a href=\"#\" class=\"btn btn-secondary display-4\" data-dismiss=\"modal\">Close</a></div>\n      </div>\n    </div>\n  </div>\n</div>",
-          "modalBody": "<iframe src=\"https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2FOportunidadesRioDasOstrasMacae%2Fposts%2F3474946822626242&show_text=false&width=552&height=421&appId\" width=\"552\" height=\"421\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowTransparency=\"true\" allow=\"encrypted-media\"></iframe>     ",
+          "modalBody": "Veja as vagas diponiveis",
           "alias": "witsec-modal-window",
           "_tags": [
             "Extension"
           ],
           "_name": "witsec-modal-window-block",
           "_anchor": "witsec-modal-window-block-1g",
-          "modalWindow": "<div class=\"modal \" id=\"seja-bem-vindo\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"seja-bem-vindoLabel\" aria-hidden=\"true\">  <div class=\"modal-dialog  \" style=\"height:auto\" role=\"document\">    <div class=\"modal-content\"><div class=\"modal-header\">  <h5 class=\"no-anim modal-title\" id=\"seja-bem-vindoLabel\">Contratação Imediata</h5>  <a href=\"#\" class=\"no-anim close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a></div><div class=\"modal-body\" id=\"seja-bem-vindo_body\"><iframe src=\"https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2FOportunidadesRioDasOstrasMacae%2Fposts%2F3474946822626242&show_text=false&width=552&height=421&appId\" width=\"552\" height=\"421\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowTransparency=\"true\" allow=\"encrypted-media\"></iframe>     </div><div class=\"modal-footer\"><div class=\"mbr-section-btn\"><a href=\"#\" class=\"no-anim btn btn-secondary display-4\" data-dismiss=\"modal\">ok?</a></div></div>    </div>  </div></div><script>document.addEventListener(\"DOMContentLoaded\", function() {  $(\"#seja-bem-vindo\").on(\"hidden.bs.modal\", function () {    var html = $( \"#seja-bem-vindo_body\" ).html();    $( \"#seja-bem-vindo_body\" ).empty();    $( \"#seja-bem-vindo_body\" ).append(html);  })});</script>"
+          "modalWindow": "<div class=\"modal \" id=\"seja-bem-vindo\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"seja-bem-vindoLabel\" aria-hidden=\"true\">  <div class=\"modal-dialog  \" style=\"height:auto\" role=\"document\">    <div class=\"modal-content\"><div class=\"modal-header\">  <h5 class=\"no-anim modal-title\" id=\"seja-bem-vindoLabel\">Contratação Imediata</h5>  <a href=\"#\" class=\"no-anim close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a></div><div class=\"modal-body\" id=\"seja-bem-vindo_body\">Veja as vagas diponiveis</div><div class=\"modal-footer\"><div class=\"mbr-section-btn\"><a href=\"#\" class=\"no-anim btn btn-secondary display-4\" data-dismiss=\"modal\">ok?</a></div></div>    </div>  </div></div><script>document.addEventListener(\"DOMContentLoaded\", function() {  $(\"#seja-bem-vindo\").on(\"hidden.bs.modal\", function () {    var html = $( \"#seja-bem-vindo_body\" ).html();    $( \"#seja-bem-vindo_body\" ).empty();    $( \"#seja-bem-vindo_body\" ).append(html);  })});</script>"
         },
         {
           "alias": false,
