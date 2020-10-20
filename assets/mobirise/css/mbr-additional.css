@@ -988,6 +988,31 @@ section.lazy-placeholder:after {
   padding-bottom: 30px;
   background-color: #2e2e2e;
 }
+.cid-StM8KHWedN {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #ff3366;
+}
+.cid-StM8KHWedN .news {
+  width: 175px;
+  background-color: #55b4d4;
+}
+.cid-StM8KHWedN .news-scroll a {
+  text-decoration: none;
+}
+.cid-StM8KHWedN .dot {
+  height: 6px;
+  width: 6px;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-top: 2px !important;
+  background-color: #ff3366;
+  border-radius: 50%;
+  display: inline-block;
+}
+.cid-StM8KHWedN DIV {
+  color: #ffffff;
+}
 .cid-saR3AvqWSG {
   padding-top: 15px;
   padding-bottom: 0px;
