@@ -419,42 +419,6 @@
           "_global": true,
           "_once": "footers",
           "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "background-color": "@bgcolor",
-            ".news": {
-              "width": "(@newswidth * 1px)",
-              "background-color": "@newscolor"
-            },
-            ".news-scroll a": {
-              "text-decoration": "none"
-            },
-            ".dot": {
-              "height": "6px",
-              "width": "6px",
-              "margin-left": "3px",
-              "margin-right": "3px",
-              "margin-top": "2px !important",
-              "background-color": "@dotscolor",
-              "border-radius": "50%",
-              "display": "inline-block"
-            },
-            "DIV": {
-              "color": "#ffffff"
-            }
-          },
-          "_name": "design-block",
-          "_customHTML": "<section>\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"1\">\n        <header>News</header>\n                <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" name=\"textWidth\" title=\"Box Width\" min=\"4\" max=\"12\" value=\"6\" step=\"1\">\n        <input type=\"range\" inline title=\"News Width\" name=\"newswidth\" min=\"100\" max=\"250\" step=\"1\" value=\"175\">\n        <input type=\"color\" title=\"News Color\" name=\"newscolor\" value=\"#55b4d4\">\n        <input type=\"color\" title=\"Dots Color\" name=\"dotscolor\" value=\"#ff3366\">\n                \n\n        <header>Text</header>\n      <input type=\"color\" title=\"Text BG Color\" name=\"textbgcolor\" value=\"#ffffff\">\n\n        <header>Background</header>\n        <input type=\"color\" title=\"Background Color\" name=\"bgcolor\" value=\"#ff3366\">\n               <!-- End block parameters -->\n        </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n<div class=\"container mt-10 col-lg-{{textWidth}}\">\n    <div class=\"row\">\n        <div class=\"col-md-12 \">\n            <div class=\"d-flex justify-content-between align-items-center breaking-news\" style=\"background: {{textbgcolor}}\">\n                <div class=\"d-flex flex-row flex-grow-1 flex-fill justify-content-center py-2  px-2 news\"><span class=\"d-flex align-items-center\"><div mbr-text>&nbsp;Breaking News</div></span></div>\n                <marquee class=\"news-scroll\" behavior=\"scroll\" direction=\"left\" onmouseover=\"this.stop();\" onmouseout=\"this.start();\"> <a href=\"#\"></a><div mbr-text><a href=\"#\" class=\"text-primary\">eur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a> <span class=\"dot\"></span> <a href=\"#\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </a> <span class=\"dot\"></span> <a href=\"#\">Duis aute irure dolor in reprehenderit in voluptate velit esse </a></div> </marquee>\n            </div>\n        </div>\n    </div>\n\n     </div>\n\n\n   \n</div></section>",
-          "_cid": "StM8KHWedN",
-          "_anchor": "design-block-StM8KHWedN",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
         }
       ]
     },
