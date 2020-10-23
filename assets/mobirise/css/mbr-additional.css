@@ -1775,3 +1775,36 @@ section.lazy-placeholder:after {
   padding-bottom: 30px;
   background-color: #2e2e2e;
 }
+.cid-seh2d5Z41Q {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #ffffff;
+}
+.cid-seh2d5Z41Q .testimonial-text {
+  font-style: italic;
+  font-weight: 300;
+  color: #232323;
+}
+.cid-seh2d5Z41Q .mbr-author-name {
+  font-weight: bold;
+}
+.cid-seh2d5Z41Q .media-container-row {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+@media (max-width: 991px) {
+  .cid-seh2d5Z41Q .mbr-figure,
+  .cid-seh2d5Z41Q img {
+    max-height: 300px;
+    width: auto;
+    margin: auto;
+  }
+  .cid-seh2d5Z41Q .media-content {
+    padding-top: 1.5rem !important;
+  }
+}
+.cid-seh2d7DncK {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #2e2e2e;
+}
