@@ -1455,73 +1455,174 @@ padding-bottom: (@paddingBottom * 15px);
   background-color: @bg-value;
 }
 }
+@primaryColor: #149dcc;
+@secondaryColor: #ff3366;
+@successColor: #F7ED4A;
+@infoColor: #82786E;
+@warningColor: #879A9F;
+@dangerColor: #B1A374;
+@mainFont: Rubik;
+@display1Font: 'Rubik', sans-serif;
+@display1Size: 4.25;
+@display2Font: 'Rubik', sans-serif;
+@display2Size: 3;
+@display5Font: 'Rubik', sans-serif;
+@display5Size: 1.5;
+@display7Font: 'Rubik', sans-serif;
+@display7Size: 1;
+@display4Font: 'Rubik', sans-serif;
+@display4Size: 1;
+@isRoundedButtons: true;
+@isAnimatedOnScroll: true;
+@isScrollToTopButton: true;
+@isPublish: true;
+
 .cid-sdqJVHcuBJ {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  background-color: #b2ccd2;
+@paddingTop: 0;
+@paddingBottom: 0;
+@showImage: true;
+@showTitle: true;
+@showText: true;
+@showButtons: true;
+@cardsBg: #ffffff;
+@cardsAmount: "4";
+@uname__10: "file:///C:/Users/bacho/AppData/Local/Mobirise.com/Mobirise/sintoniabarra_0040gmail_002ecom/addons/mobirise4/components/features3/../_images/background5.jpg";
+@uname__11: true;
+@uname__12: #b2ccd2;
+@bg-value: #b2ccd2;
+@bg-type: "color";
+@bg-color-value: #b2ccd2;
+@bg-parallax: false;
+@overlay: false;
+@overlayColor: #efefef;
+@overlayOpacity: 0.8;
+
+padding-top: (@paddingTop * 15px);
+padding-bottom: (@paddingBottom * 15px);
+& when (@bg-type = 'color') {
+  background-color: @bg-value;
 }
-.cid-sdqJVHcuBJ .card-box {
+& when (@bg-type = 'image') {
+  background-image: url(../../../@bg-value);
+}
+.card-box {
   padding: 0 2rem;
 }
-.cid-sdqJVHcuBJ .mbr-section-btn {
+.mbr-section-btn {
   padding-top: 1rem;
+  a {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
 }
-.cid-sdqJVHcuBJ .mbr-section-btn a {
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-.cid-sdqJVHcuBJ h4 {
+h4 {
   font-weight: 500;
   margin-bottom: 0;
   text-align: left;
   padding-top: 2rem;
 }
-.cid-sdqJVHcuBJ p {
+p {
   margin-bottom: 0;
   text-align: left;
   padding-top: 1.5rem;
+  & when not (@showTitle) {
+    padding-top: 2rem;
+  }
 }
-.cid-sdqJVHcuBJ .mbr-text {
+.mbr-text {
   color: #000000;
   text-align: center;
 }
-.cid-sdqJVHcuBJ .card-wrapper {
+.card-wrapper {
   height: 100%;
   padding-bottom: 2rem;
-  background: #ffffff;
+  background: @cardsBg;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
   transition: box-shadow 0.3s;
+  & when not (@showTitle) {
+    & when not (@showText) {
+      & when not (@showButtons) {
+        padding-bottom: 0;
+      }
+    }
+  }
+  &:hover {
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+  }
 }
-.cid-sdqJVHcuBJ .card-wrapper:hover {
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s;
 }
+
 .cid-JOI2ragJHq {
-  padding-top: 15px;
-  padding-bottom: 30px;
-  background-color: #232323;
-}
-.cid-JOI2ragJHq .mbr-text,
-.cid-JOI2ragJHq blockquote {
+@paddingTop: 1;
+@paddingBottom: 2;
+@bgColor: #232323;
+@quoteBgColor: #232323;
+@quoteLineColor: #f7ed4a;
+@quoteLineWidth: 10;
+@quoteBorderRadius: 25;
+
+padding-top: (@paddingTop * 15px);
+padding-bottom: (@paddingBottom * 15px);
+background-color: @bgColor;
+.mbr-text, blockquote {
   color: #767676;
 }
-.cid-JOI2ragJHq blockquote {
-  background-color: #232323;
-  border-color: #f7ed4a;
-  border-width: 10px;
+blockquote {
+  background-color: @quoteBgColor;
+  border-color: @quoteLineColor;
+  border-width: (@quoteLineWidth * 1px);
   margin-bottom: 0px;
-  border-radius: 0px 25px 25px 0px;
+  border-radius: 0px (@quoteBorderRadius * 1px) (@quoteBorderRadius * 1px) 0px;
 }
-.cid-JOI2ragJHq P {
+P {
   text-align: left;
 }
-.cid-JOI2ragJHq DIV {
+DIV {
   color: #ffffff;
 }
+}
+
+#witsec-modal-window-block-19 {
+}
+
+#witsec-custom-html-block-1d {
+}
+
 .cid-sb8kFH9yrC {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: #2e2e2e;
+@paddingTop: 2;
+@paddingBottom: 2;
+@reveal: false;
+@uname__7: "file:///C:/Users/bacho/AppData/Local/Mobirise.com/Mobirise/sintoniabarra_0040gmail_002ecom/addons/mobirise4/components/footer6/../_images/background5.jpg";
+@uname__8: false;
+@uname__9: #2e2e2e;
+@bg-value: #2e2e2e;
+@bg-type: "color";
+@bg-color-value: #2e2e2e;
+@bg-parallax: false;
+@overlay: true;
+@overlayColor: #232323;
+@overlayOpacity: 0.8;
+
+padding-top: (@paddingTop * 15px);
+padding-bottom: (@paddingBottom * 15px);
+& when (@bg-type = 'image') {
+  background-image: url(../../../@bg-value);
+}
+& when (@bg-type = 'color') {
+  background-color: @bg-value;
+}
+}
+
+.cid-sf04aTDsuZ {
+
+padding-top: (@paddingTop * 15px);
+padding-bottom: (@paddingBottom * 15px);
+background-color: @bgColor;
+.mbr-section {
+  text-align: center;
+  color: #fff;
+}
 }
 .cid-sb2F7m1CTW {
   padding-top: 0px;
