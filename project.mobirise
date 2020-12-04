@@ -347,38 +347,6 @@
         },
         {
           "_params": {
-            "modalName": "promo-es",
-            "modalSize": "medium",
-            "modalHeader": false,
-            "modalTitle": "Novidades",
-            "modalBody": "Promoção do dia \"POMADA FISIOFORT por apenas R$12,00 reais",
-            "modalBodyHTML": false,
-            "modalFooter": true,
-            "modalCloseBtn": true,
-            "modalCloseText": "Tudo bem?",
-            "modalLink": false,
-            "modalLinkUrl": "",
-            "modalLinkText": "Visit Mobirise",
-            "modalLinkNewWindow": true,
-            "modalVerticalCenter": true,
-            "modalFade": true,
-            "modalAutoOpen": true,
-            "modalAutoOpenOnce": true,
-            "modalAutoOpenGDPR": true,
-            "modalAutoOpenDelay": 0
-          },
-          "modalTest": "<div class=\"mbr-section-btn\">\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#promo-es\">Preview promo-es</a>\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#promo-es-howtouse\">How to use promo-es</a>\n</div>\n<div class=\"modal fade\" id=\"promo-es-howtouse\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"promo-es-howtouseLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\" style=\"height:auto\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\" id=\"promo-es-howtouseLabel\">How to use?</h5>\n        <a href=\"\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a>\n      </div>\n      <div class=\"modal-body\">\n        Using your new modal is very easy. Simply create a new link, then click the \"...\" tab and enter the following as custom URL:<br /><br />\n        <code>javascript:OpenModal('promo-es')</code>\n      </div>\n      <div class=\"modal-footer\">\n        <div class=\"mbr-section-btn\"><a href=\"#\" class=\"btn btn-secondary display-4\" data-dismiss=\"modal\">Close</a></div>\n      </div>\n    </div>\n  </div>\n</div>",
-          "modalBody": "Promoção do dia \"POMADA FISIOFORT por apenas R$12,00 reais",
-          "alias": "witsec-modal-window",
-          "_tags": [
-            "Extension"
-          ],
-          "_name": "witsec-modal-window-block",
-          "_anchor": "witsec-modal-window-block-9",
-          "modalWindow": "<div class=\"modal fade\" id=\"promo-es\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"promo-esLabel\" aria-hidden=\"true\">  <div class=\"modal-dialog  modal-dialog-centered\" style=\"height:auto\" role=\"document\">    <div class=\"modal-content\"><div class=\"modal-body\" id=\"promo-es_body\">Promoção do dia \"POMADA FISIOFORT por apenas R$12,00 reais</div><div class=\"modal-footer\"><div class=\"mbr-section-btn\"><a href=\"#\" class=\"no-anim btn btn-secondary display-4\" data-dismiss=\"modal\">Tudo bem?</a></div></div>    </div>  </div></div><script>document.addEventListener(\"DOMContentLoaded\", function() {  $(\"#promo-es\").on(\"hidden.bs.modal\", function () {    var html = $( \"#promo-es_body\" ).html();    $( \"#promo-es_body\" ).empty();    $( \"#promo-es_body\" ).append(html);  })});</script>"
-        },
-        {
-          "_params": {
             "HTMLCode": "<script type=\"text/javascript\" async\n  src=\"//l.getsitecontrol.com/y791lm48.js\">\n</script>",
             "hideOnPublish": true,
             "paddingTop": 2,
