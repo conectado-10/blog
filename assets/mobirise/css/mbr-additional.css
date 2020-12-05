@@ -962,6 +962,49 @@ section.lazy-placeholder:after {
   padding-bottom: 30px;
   background-color: #2e2e2e;
 }
+.cid-QgCqEZopsd {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: linear-gradient(0deg, #232323, #ffffff);
+}
+.cid-QgCqEZopsd .pulsingButton {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: none;
+  box-shadow: 0 0 0 0 #7f1933;
+  border-radius: 50%;
+  background-color: #232323;
+  background-image: url("../../../assets/images/whatsapp-37229-100x100.png");
+  background-size: 70%, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+@-webkit-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 78px rgba(232, 76, 61, 0);
+  }
+}
+@-moz-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 78px rgba(232, 76, 61, 0);
+  }
+}
+@-ms-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 78px rgba(232, 76, 61, 0);
+  }
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 78px rgba(232, 76, 61, 0);
+  }
+}
 .cid-saR3AvqWSG {
   padding-top: 0px;
   padding-bottom: 0px;
