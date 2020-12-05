@@ -965,16 +965,16 @@ section.lazy-placeholder:after {
 .cid-QgCqEZopsd {
   padding-top: 120px;
   padding-bottom: 120px;
-  background: linear-gradient(0deg, #232323, #ffffff);
+  background: linear-gradient(130deg, #232323, #ffffff);
 }
 .cid-QgCqEZopsd .pulsingButton {
   position: relative;
   width: 150px;
   height: 150px;
   border: none;
-  box-shadow: 0 0 0 0 #7f1933;
+  box-shadow: 0 0 0 0 #3ac705;
   border-radius: 50%;
-  background-color: #232323;
+  background-color: #77ab01;
   background-image: url("../../../assets/images/whatsapp-37229-100x100.png");
   background-size: 70%, cover;
   background-position: center;

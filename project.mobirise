@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "My Site",
-    "currentPage": "page1.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -30,7 +30,9 @@
       "additionalSetColors": [
         "#b6ea3e",
         "#000000",
-        "#ff4a52"
+        "#ff4a52",
+        "#3ac705",
+        "#77ab01"
       ]
     },
     "path": "@PROJECT_PATH@",
@@ -435,7 +437,7 @@
             }
           },
           "_name": "design-block",
-          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n        <input type=\"color\" title=\"Backgroud Color\" name=\"bgColor\" value=\"#232323\">\n                         <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#ffffff\">\n                                  <input type=\"range\" name=\"angle\" title=\"Angle\" min=\"0\" max=\"360\" value=\"0\" step=\"1\">\n                       \n                      \n         <header>Bouton</header>\n          <input type=\"range\" inline title=\"Bouton Size\" name=\"buttonsize\" min=\"150\" max=\"500\" step=\"1\" value=\"150\">\n             <input type=\"range\" inline title=\"Pulse Size\" name=\"pulsesize\" min=\"20\" max=\"100\" step=\"1\" value=\"78\">\n         <input type=\"color\" title=\"Pulse Color\" name=\"pulsecolor\" value=\"#7f1933\">\n          <input type=\"color\" title=\"Bg Color\" name=\"fondcolor\" value=\"#232323\">\n  <input type=\"image\" title=\"Image\" name=\"imagetest\" value=\"@PROJECT_PATH@/assets/images/whatsapp-37229-100x100.png\">\n  <input type=\"range\" inline title=\"Size\" name=\"imagesize\" min=\"0\" max=\"100\" step=\"1\" value=\"7\">\n  <input type=\"text\" title=\"Link\" name=\"buttonlink\" value=\"https://api.whatsapp.com/send?phone=552299972&text=Esta%20com%20d%C3%BAvidas%3Fme%20conte\">\n          <select title=\"Target\" name=\"targetlink\">\n            <option value=\"_self\" selected>Frame</option>\n            <option value=\"_blank\">Tab</option>\n\n</select>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row align-center\">\n\n\n<a href=\"{{buttonlink}}\" target=\"{{targetlink}}\"><div class=\"pulsingButton\"></div></a>\n\n            \n\n            \n        </div>\n    </div></section>",
+          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n        <input type=\"color\" title=\"Backgroud Color\" name=\"bgColor\" value=\"#232323\">\n                         <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#ffffff\">\n                                  <input type=\"range\" name=\"angle\" title=\"Angle\" min=\"0\" max=\"360\" value=\"130\" step=\"1\">\n                       \n                      \n         <header>Bouton</header>\n          <input type=\"range\" inline title=\"Bouton Size\" name=\"buttonsize\" min=\"150\" max=\"500\" step=\"1\" value=\"150\">\n             <input type=\"range\" inline title=\"Pulse Size\" name=\"pulsesize\" min=\"20\" max=\"100\" step=\"1\" value=\"78\">\n         <input type=\"color\" title=\"Pulse Color\" name=\"pulsecolor\" value=\"#3ac705\">\n          <input type=\"color\" title=\"Bg Color\" name=\"fondcolor\" value=\"#77ab01\">\n  <input type=\"image\" title=\"Image\" name=\"imagetest\" value=\"@PROJECT_PATH@/assets/images/whatsapp-37229-100x100.png\">\n  <input type=\"range\" inline title=\"Size\" name=\"imagesize\" min=\"0\" max=\"100\" step=\"1\" value=\"7\">\n  <input type=\"text\" title=\"Link\" name=\"buttonlink\" value=\"https://api.whatsapp.com/send?phone=552299972&text=Esta%20com%20d%C3%BAvidas%3Fme%20conte\">\n          <select title=\"Target\" name=\"targetlink\">\n            <option value=\"_self\" selected>Frame</option>\n            <option value=\"_blank\">Tab</option>\n\n</select>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row align-center\">\n\n\n<a href=\"{{buttonlink}}\" target=\"{{targetlink}}\"><div class=\"pulsingButton\"></div></a>\n\n            \n\n            \n        </div>\n    </div></section>",
           "_cid": "QgCqEZopsd",
           "_anchor": "design-block-QgCqEZopsd",
           "_protectedParams": [],
